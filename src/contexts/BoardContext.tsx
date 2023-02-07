@@ -2,10 +2,13 @@ import React, { ReactNode, useMemo } from "react";
 
 const ROWS = 12;
 const COLUMNS = 4;
-export const BoardContext = React.createContext({
-  rows: ROWS,
-  columns: COLUMNS,
-});
+
+type BoardContextType = {
+  rows: number;
+  columns: number;
+};
+
+export const BoardContext = React.createContext<BoardContextType | null>(null);
 
 type BoardContextProviderProps = {
   children: ReactNode;
