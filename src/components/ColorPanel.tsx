@@ -1,10 +1,10 @@
-import { Colors } from "../static/colors.enum";
+import { COLORS } from "../static/colors.const";
 import Color from "./Color";
 
 export default function ColorPanel() {
   return (
     <div className="flex justify-between mx-auto pb-4">
-      {Object.entries(Colors).map(([colorName, colorClass]) => {
+      {Object.entries(COLORS).map(([colorName, colorClass]) => {
         return (
           <Color
             key={colorName}

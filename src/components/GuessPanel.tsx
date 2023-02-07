@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { GameContext, GameContextType } from "../contexts/GameContext";
 import Guess from "./Guess";
 
@@ -8,6 +8,7 @@ type GuessPanelProps = {
 
 export default function GuessPanel({ rowIndex }: GuessPanelProps) {
   const { columns } = useContext(GameContext) as GameContextType;
+  const [guesses, setGuesses] = useState();
 
   const columnsList = [];
 
