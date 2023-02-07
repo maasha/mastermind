@@ -5,9 +5,9 @@ type ColorProps = {
 };
 
 export default function Color({ color }: ColorProps) {
-  const [{ isDragging }, drag, preview] = useDrag(
+  const [{ isDragging }, drag] = useDrag(
     () => ({
-      type: color,
+      type: "color",
       collect: (monitor) => ({
         isDragging: !!monitor.isDragging(),
       }),

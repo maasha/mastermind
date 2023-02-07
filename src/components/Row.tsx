@@ -1,4 +1,4 @@
-import Guess from "./Guess";
+import GuessPanel from "./GuessPanel";
 import Response from "./Response";
 
 type RowProps = {
@@ -8,7 +8,7 @@ type RowProps = {
 export default function Row({ result }: RowProps) {
   return (
     <div className="flex justify-between">
-      <Guess />
+      <GuessPanel />
       {result || <Response />}
     </div>
   );
