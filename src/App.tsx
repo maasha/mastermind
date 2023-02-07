@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="mastermind">
       <div className="mastermind-header">
-        <h1>Mastermind</h1>
+        <h1 className="text-3xl font-bold underline">Mastermind</h1>
       </div>
 
       <BoardContextProvider>
