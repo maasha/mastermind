@@ -10,5 +10,9 @@ export default function Board() {
     rowList.push(<Row key={i} />);
   }
 
-  return <div className="mastermind-board">{rowList}</div>;
+  return (
+    <div className="mastermind-board w-80 border-3 rounded bg-yellow-700 mx-auto">
+      {rowList}
+    </div>
+  );
 }

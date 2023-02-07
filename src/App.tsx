@@ -1,14 +1,11 @@
 import Board from "./components/Board";
 import { BoardContextProvider } from "./contexts/BoardContext";
 
-const ROWS = 12;
-const COLUMNS = 4;
-
 function App() {
   return (
-    <div className="mastermind">
+    <div className="mastermind w-full h-full p-20 pt-5">
       <div className="mastermind-header">
-        <h1 className="text-3xl font-bold underline">Mastermind</h1>
+        <h1 className="text-center text-3xl font-bold p-10">Mastermind</h1>
       </div>
 
       <BoardContextProvider>
