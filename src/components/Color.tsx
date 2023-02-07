@@ -20,7 +20,7 @@ export default function Color({ colorName, colorClass }: ColorProps) {
   return (
     <span
       ref={dragRef}
-      className={`h-8 w-8 p-1 inline-block border-2 border-black rounded-full ${colorClass} ${
+      className={`h-8 w-8 p-1 inline-block border-2 border-black rounded-full hover:cursor-move ${colorClass} ${
         isDragging ? "opacity-50" : "opacity-100"
       }`}
     ></span>

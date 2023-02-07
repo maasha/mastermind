@@ -7,8 +7,9 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 function App() {
   return (
     <div className="mastermind w-96 h-full pt-2 mx-auto">
-      <div className="mastermind-header">
-        <h1 className="text-center text-3xl font-bold pb-5">Master Mind</h1>
+      <div className="mastermind-header flex justify-center">
+        <h1 className="text-3xl font-bold pb-5">Master Mind</h1>
+        <img src="/brain.svg" alt="Brain Logo" className="h-10 ml-4"></img>
       </div>
 
       <GameContextProvider>

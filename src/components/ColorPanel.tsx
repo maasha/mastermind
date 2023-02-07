@@ -3,7 +3,7 @@ import Color from "./Color";
 
 export default function ColorPanel() {
   return (
-    <div className="flex justify-between mx-auto pb-4">
+    <div className="flex justify-between mx-auto pb-4 px-2">
       {Object.entries(COLORS).map(([colorName, colorClass]) => {
         return (
           <Color
