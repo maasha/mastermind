@@ -7,12 +7,12 @@ export default function Board() {
   const rowList = [];
 
   for (let i = 0; i < rows; i += 1) {
-    rowList.push(<Row key={i} />);
+    rowList.push(<Row key={i} rowIndex={i + 1} />);
   }
 
   return (
     <div className="border-3 rounded bg-slate-500 mx-auto">
-      <Row key="result" result={true}></Row>
+      <Row key="result" rowIndex={0} result={true}></Row>
       {rowList}
     </div>
   );

@@ -1,7 +1,5 @@
 import React, { ReactNode, useMemo } from "react";
-
-const ROWS = 12;
-const COLUMNS = 4;
+import { COLUMNS, ROWS } from "../static/board-dimensions.const";
 
 export type GameContextType = {
   rows: number;

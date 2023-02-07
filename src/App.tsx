@@ -16,12 +16,6 @@ function App() {
           <ColorPanel />
           <Board />
         </DndProvider>
-
-        <div className="flex justify-center pt-2">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            New Game
-          </button>
-        </div>
       </GameContextProvider>
     </div>
   );
