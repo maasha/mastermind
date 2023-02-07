@@ -1,11 +1,15 @@
 import Guess from "./Guess";
 import Response from "./Response";
 
-export default function Row() {
+type RowProps = {
+  result?: boolean;
+};
+
+export default function Row({ result }: RowProps) {
   return (
     <div className="flex justify-between">
       <Guess />
-      <Response />
+      {result || <Response />}
     </div>
   );
 }
