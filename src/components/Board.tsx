@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { BoardContext, BoardContextType } from "../contexts/BoardContext";
+import { GameContext, GameContextType } from "../contexts/GameContext";
 import Row from "./Row";
 
 export default function Board() {
-  const { rows } = useContext(BoardContext) as BoardContextType;
+  const { rows } = useContext(GameContext) as GameContextType;
   const rowList = [];
 
   for (let i = 0; i < rows; i += 1) {
@@ -11,7 +11,7 @@ export default function Board() {
   }
 
   return (
-    <div className="w-80 border-3 rounded bg-yellow-700 mx-auto">
+    <div className="border-3 rounded bg-slate-500 mx-auto">
       <Row key="result" result={true}></Row>
       {rowList}
     </div>

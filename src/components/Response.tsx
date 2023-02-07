@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { BoardContext, BoardContextType } from "../contexts/BoardContext";
+import { GameContext, GameContextType } from "../contexts/GameContext";
 
 export default function Response() {
-  const { columns } = useContext(BoardContext) as BoardContextType;
+  const { columns } = useContext(GameContext) as GameContextType;
 
   const columnsList = [];
 
@@ -10,7 +10,7 @@ export default function Response() {
     columnsList.push(
       <span
         key={i}
-        className="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-yellow-900"
+        className="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
       ></span>
     );
   }

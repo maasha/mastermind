@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { BoardContext, BoardContextType } from "../contexts/BoardContext";
+import { GameContext, GameContextType } from "../contexts/GameContext";
 import Guess from "./Guess";
 
 export default function GuessPanel() {
-  const { columns } = useContext(BoardContext) as BoardContextType;
+  const { columns } = useContext(GameContext) as GameContextType;
 
   const columnsList = [];
 

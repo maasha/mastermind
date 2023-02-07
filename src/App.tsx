@@ -1,26 +1,28 @@
 import Board from "./components/Board";
 import ColorPanel from "./components/ColorPanel";
-import { BoardContextProvider } from "./contexts/BoardContext";
+import { GameContextProvider } from "./contexts/GameContext";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
 function App() {
   return (
-    <div className="mastermind w-full h-full p-20 pt-5">
+    <div className="mastermind w-96 h-full pt-2 mx-auto">
       <div className="mastermind-header">
-        <h1 className="text-center text-3xl font-bold p-10">Master Mind</h1>
+        <h1 className="text-center text-3xl font-bold pb-5">Master Mind</h1>
       </div>
 
-      <DndProvider backend={HTML5Backend}>
-        <ColorPanel />
-        <BoardContextProvider>
+      <GameContextProvider>
+        <DndProvider backend={HTML5Backend}>
+          <ColorPanel />
           <Board />
-        </BoardContextProvider>
-      </DndProvider>
+        </DndProvider>
 
-      <div className="mastermind-footer">
-        <h3>Footer</h3>
-      </div>
+        <div className="flex justify-center pt-2">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            New Game
+          </button>
+        </div>
+      </GameContextProvider>
     </div>
   );
 }

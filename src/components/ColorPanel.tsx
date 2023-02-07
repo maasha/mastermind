@@ -11,7 +11,7 @@ const COLORS = [
 
 export default function ColorPanel() {
   return (
-    <div className="flex w-80 justify-between mx-auto pb-4">
+    <div className="flex justify-between mx-auto pb-4">
       {COLORS.map((color) => {
         return <Color key={color} color={color} />;
       })}

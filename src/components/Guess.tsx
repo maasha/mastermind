@@ -18,7 +18,7 @@ export default function Guess() {
     <span
       ref={drop}
       className={`h-8 w-8 p-1 inline-block border-2 border-black rounded-full ${
-        isOver ? "bg-red-100" : "bg-yellow-900"
+        isOver ? "bg-red-100" : "bg-slate-600"
       }`}
     ></span>
   );
