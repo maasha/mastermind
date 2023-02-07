@@ -3,7 +3,7 @@ import React, { ReactNode, useMemo } from "react";
 const ROWS = 12;
 const COLUMNS = 4;
 
-type BoardContextType = {
+export type BoardContextType = {
   rows: number;
   columns: number;
 };
