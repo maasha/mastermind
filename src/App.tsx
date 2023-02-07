@@ -1,4 +1,5 @@
 import Board from "./components/Board";
+import ColorPanel from "./components/ColorPanel";
 import { BoardContextProvider } from "./contexts/BoardContext";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       </div>
 
       <BoardContextProvider>
+        <ColorPanel />
         <Board />
       </BoardContextProvider>
 

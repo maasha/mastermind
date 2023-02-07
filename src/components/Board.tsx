@@ -11,7 +11,7 @@ export default function Board() {
   }
 
   return (
-    <div className="mastermind-board w-80 border-3 rounded bg-yellow-700 mx-auto">
+    <div className="w-80 border-3 rounded bg-yellow-700 mx-auto">
       <Row key="result" result={true}></Row>
       {rowList}
     </div>
