@@ -6,20 +6,19 @@ import { PegProps } from "./Peg";
 import _ from "lodash";
 
 type GuessProps = {
-  active: boolean;
   rowIndex: number;
   columnIndex: number;
 };
 
-export default function Guess({ active, rowIndex, columnIndex }: GuessProps) {
-  const { setGuessRows } = useContext(GameContext);
+export default function Guess({ rowIndex, columnIndex }: GuessProps) {
+  const { setGuessRows, activeRowIndex } = useContext(GameContext);
 
   const [guessColorClass, setGuessColorClass] = useState("bg-slate-600");
 
   const [{ isOver, canDrop }, dropRef] = useDrop(
     () => ({
       accept: "color",
-      canDrop: () => active,
+      canDrop: () => true,
       drop: (color: PegProps) => guessColor(color.colorName),
       collect: (monitor) => ({
         isOver: monitor.isOver(),
@@ -41,7 +40,7 @@ export default function Guess({ active, rowIndex, columnIndex }: GuessProps) {
 
   return (
     <span
-      ref={dropRef}
+      ref={rowIndex === activeRowIndex ? dropRef : null}
       className={`h-8 w-8 p-1 inline-block border-2 border-black rounded-full ${
         isOver && canDrop ? "bg-red-100" : guessColorClass
       }`}
