@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { GameContext, GameContextType } from "../contexts/GameContext";
+import { GameContext } from "../contexts/GameContext";
 import Row from "./Row";
 
 export default function Board() {
-  const { rows } = useContext(GameContext) as GameContextType;
+  const { rows } = useContext(GameContext);
   const rowList = [];
 
   for (let i = 0; i < rows; i += 1) {

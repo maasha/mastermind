@@ -1,13 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useDrop } from "react-dnd";
+import { GameContext } from "../contexts/GameContext";
 import { COLORS } from "../static/colors.const";
 import { PegProps } from "./Peg";
 
 type GuessProps = {
   active: boolean;
+  columnIndex: number;
 };
 
-export default function Guess({ active }: GuessProps) {
+export default function Guess({ active, columnIndex }: GuessProps) {
+  const { columns, activeRowIndex } = useContext(GameContext);
+
   const [guessColorClass, setGuessColorClass] = useState("bg-slate-600");
 
   const [{ isOver, canDrop }, dropRef] = useDrop(

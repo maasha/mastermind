@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { GameContext, GameContextType } from "../contexts/GameContext";
+import { GameContext } from "../contexts/GameContext";
 
 type ResponseProps = {
   rowIndex: number;
 };
 
 export default function Response({ rowIndex }: ResponseProps) {
-  const { columns } = useContext(GameContext) as GameContextType;
+  const { columns } = useContext(GameContext);
 
   const columnsList = [];
 

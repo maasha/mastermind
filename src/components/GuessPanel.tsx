@@ -1,5 +1,5 @@
-import { useContext, useState } from "react";
-import { GameContext, GameContextType } from "../contexts/GameContext";
+import { useContext } from "react";
+import { GameContext } from "../contexts/GameContext";
 import Guess from "./Guess";
 
 type GuessPanelProps = {
@@ -7,15 +7,16 @@ type GuessPanelProps = {
 };
 
 export default function GuessPanel({ rowIndex }: GuessPanelProps) {
-  const { columns, activeRowIndex } = useContext(
-    GameContext
-  ) as GameContextType;
-
+  const { columns, activeRowIndex } = useContext(GameContext);
   const columnsList = [];
 
   for (let i = 0; i < columns; i += 1) {
     columnsList.push(
-      <Guess key={i} active={rowIndex === activeRowIndex}></Guess>
+      <Guess
+        key={i}
+        active={rowIndex === activeRowIndex}
+        columnIndex={i}
+      ></Guess>
     );
   }
 

@@ -15,14 +15,16 @@ function compileCode(allowDuplicates = false): string[] {
   return code;
 }
 
-export type GameContextType = {
+type GameContextType = {
   rows: number;
   columns: number;
   activeRow: boolean[];
   activeRowIndex: number;
 };
 
-export const GameContext = React.createContext<GameContextType | null>(null);
+export const GameContext = React.createContext<GameContextType>(
+  null as unknown as GameContextType
+);
 
 type GameContextProviderProps = {
   children: ReactNode;
