@@ -22,7 +22,7 @@ function compileGuessRows(): IGuess[] {
 
   for (let i = 0; i < ROWS; i += 1) {
     rows.push({
-      guess: Array(COLUMNS),
+      guess: Array(COLUMNS).fill(undefined),
       correctPositions: 0,
       correctColors: 0,
     });
@@ -88,6 +88,7 @@ export function GameContextProvider({ children }: GameContextProviderProps) {
   // useMemo(() => codeToGuess = compileCode(), [])
 
   useEffect(() => {
+    console.log("USE EFFECT");
     const copy = _.cloneDeep(guessRows);
     copy[activeRowIndex].correctColors = correctColors(
       codeToGuess,
@@ -99,20 +100,33 @@ export function GameContextProvider({ children }: GameContextProviderProps) {
     );
 
     setGuessRows(copy);
-  }, [JSON.stringify(guessRows[activeRowIndex])]);
 
-  useEffect(() => {
-    if (guessRows[activeRowIndex].correctPositions === COLUMNS) {
+    if (copy[activeRowIndex].correctPositions === COLUMNS) {
       setGameWon(true);
+      return;
     }
-  }, [guessRows[activeRowIndex].correctPositions]);
+
+    if (
+      activeRowIndex === ROWS - 1 &&
+      !guessRows[activeRowIndex].guess.some((v) => v == null)
+    ) {
+      setGameOver(true);
+      return;
+    }
+
+    if (
+      activeRowIndex < ROWS - 1 &&
+      !guessRows[activeRowIndex].guess.some((v) => v == null)
+    ) {
+      setActiveRowIndex((prev) => prev + 1);
+    }
+  }, [JSON.stringify(guessRows[activeRowIndex].guess)]);
 
   const boardValue = {
     rows: ROWS,
     columns: COLUMNS,
     codeToGuess,
     activeRowIndex,
-    setActiveRowIndex,
     guessRows,
     setGuessRows,
     gameWon,
