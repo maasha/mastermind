@@ -13,13 +13,11 @@ export default function Response({ rowIndex }: ResponseProps) {
 
   const columnsList = [];
 
-  console.log("Response");
-
   if (true) {
     for (let i = 0; i < correctPositions; i += 1) {
       columnsList.push(
         <span
-          key={i}
+          key={`pos-${i}`}
           className="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-black"
         ></span>
       );
@@ -28,7 +26,7 @@ export default function Response({ rowIndex }: ResponseProps) {
     for (let i = 0; i < correctColors - correctPositions; i += 1) {
       columnsList.push(
         <span
-          key={i}
+          key={`col-${i}`}
           className="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-white"
         ></span>
       );
