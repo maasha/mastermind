@@ -1,5 +1,5 @@
 import Board from "./components/Board";
-import ColorPanel from "./components/ColorPanel";
+import PegPanel from "./components/PegPanel";
 import { GameContextProvider } from "./contexts/GameContext";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
@@ -12,12 +12,12 @@ function App() {
         <img src="/brain.svg" alt="Brain Logo" className="h-10 ml-4"></img>
       </div>
 
-      <GameContextProvider>
-        <DndProvider backend={HTML5Backend}>
-          <ColorPanel />
+      <DndProvider backend={HTML5Backend}>
+        <GameContextProvider>
+          <PegPanel />
           <Board />
-        </DndProvider>
-      </GameContextProvider>
+        </GameContextProvider>
+      </DndProvider>
     </div>
   );
 }

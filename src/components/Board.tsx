@@ -7,13 +7,8 @@ export default function Board() {
   const rowList = [];
 
   for (let i = 0; i < rows; i += 1) {
-    rowList.push(<Row key={i} rowIndex={i + 1} />);
+    rowList.push(<Row key={i} rowIndex={i} />);
   }
 
-  return (
-    <div className="border-3 rounded bg-slate-500 mx-auto">
-      <Row key="result" rowIndex={0} result={true}></Row>
-      {rowList}
-    </div>
-  );
+  return <div className="border-3 rounded bg-slate-500 mx-auto">{rowList}</div>;
 }

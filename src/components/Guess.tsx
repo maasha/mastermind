@@ -1,24 +1,20 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useDrop } from "react-dnd";
-import { GameContext, GameContextType } from "../contexts/GameContext";
 import { COLORS } from "../static/colors.const";
-import { ColorProps } from "./Color";
+import { PegProps } from "./Peg";
 
 type GuessProps = {
-  rowIndex: number;
-  columnIndex: number;
+  active: boolean;
 };
 
-export default function Guess({ rowIndex, columnIndex }: GuessProps) {
-  const { guessRows, rowComplete } = useContext(GameContext) as GameContextType;
+export default function Guess({ active }: GuessProps) {
   const [guessColorClass, setGuessColorClass] = useState("bg-slate-600");
 
   const [{ isOver, canDrop }, dropRef] = useDrop(
     () => ({
       accept: "color",
-      canDrop: () => rowIndex > 0 && !rowComplete(guessRows, rowIndex - 1),
-      drop: (color: ColorProps) =>
-        guessColor(rowIndex, columnIndex, color.colorName),
+      canDrop: () => active,
+      drop: (color: PegProps) => guessColor(color.colorName),
       collect: (monitor) => ({
         isOver: monitor.isOver(),
         canDrop: monitor.canDrop(),
@@ -27,15 +23,8 @@ export default function Guess({ rowIndex, columnIndex }: GuessProps) {
     []
   );
 
-  function guessColor(
-    rowIndex: number,
-    columnIndex: number,
-    colorName: string
-  ) {
+  function guessColor(colorName: string) {
     setGuessColorClass(COLORS[colorName]);
-    guessRows[rowIndex - 1][columnIndex] = true;
-
-    console.log({ guessRows });
   }
 
   return (

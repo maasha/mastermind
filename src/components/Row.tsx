@@ -1,16 +1,15 @@
 import GuessPanel from "./GuessPanel";
-import Response from "./Response";
+import ResponsePanel from "./ResponsePanel";
 
 type RowProps = {
   rowIndex: number;
-  result?: boolean;
 };
 
-export default function Row({ rowIndex, result }: RowProps) {
+export default function Row({ rowIndex }: RowProps) {
   return (
     <div className="flex justify-between">
       <GuessPanel rowIndex={rowIndex} />
-      {result || <Response rowIndex={rowIndex} />}
+      <ResponsePanel rowIndex={rowIndex} />
     </div>
   );
 }

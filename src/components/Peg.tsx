@@ -1,11 +1,11 @@
 import { useDrag } from "react-dnd";
 
-export type ColorProps = {
+export type PegProps = {
   colorName: string;
   colorClass: string;
 };
 
-export default function Color({ colorName, colorClass }: ColorProps) {
+export default function Peg({ colorName, colorClass }: PegProps) {
   const [{ isDragging }, dragRef] = useDrag(
     () => ({
       type: "color",

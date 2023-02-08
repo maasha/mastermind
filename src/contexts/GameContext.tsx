@@ -1,39 +1,6 @@
-import React, { ReactNode, useMemo } from "react";
+import React, { ReactNode, useMemo, useState } from "react";
 import { COLUMNS, ROWS } from "../static/board-dimensions.const";
 import { COLORS } from "../static/colors.const";
-
-export type GameContextType = {
-  rows: number;
-  columns: number;
-  guessRows: boolean[][];
-  rowComplete: typeof rowComplete;
-};
-
-export const GameContext = React.createContext<GameContextType | null>(null);
-
-type GameContextProviderProps = {
-  children: ReactNode;
-};
-
-function rowComplete(guessRows: boolean[][], rowIndex: number) {
-  return guessRows[rowIndex].every((guess) => guess === true);
-}
-
-function compileGuessRows(): boolean[][] {
-  const guessRows = [];
-
-  for (let r = 0; r < ROWS; r += 1) {
-    const guessRow: boolean[] = [];
-
-    for (let c = 0; c < COLUMNS; c += 1) {
-      guessRow.push(false);
-    }
-
-    guessRows.push(guessRow);
-  }
-
-  return guessRows;
-}
 
 function compileCode(allowDuplicates = false): string[] {
   const colors = Object.keys(COLORS);
@@ -48,18 +15,35 @@ function compileCode(allowDuplicates = false): string[] {
   return code;
 }
 
+export type GameContextType = {
+  rows: number;
+  columns: number;
+  activeRow: boolean[];
+  activeRowIndex: number;
+};
+
+export const GameContext = React.createContext<GameContextType | null>(null);
+
+type GameContextProviderProps = {
+  children: ReactNode;
+};
+
 export function GameContextProvider({ children }: GameContextProviderProps) {
-  const guessRows = compileGuessRows();
+  const [activeRowIndex, setActiveRowIndex] = useState(0);
+  const [activeRow, setActiveRow] = useState([]);
   const codeToGuess = compileCode();
 
-  console.log({ guessRows, codeToGuess });
+  console.log({ codeToGuess });
 
   const boardValue = useMemo(() => {
     return {
       rows: ROWS,
       columns: COLUMNS,
-      guessRows,
-      rowComplete: rowComplete,
+      codeToGuess,
+      activeRowIndex,
+      setActiveRowIndex,
+      activeRow,
+      setActiveRow,
     };
   }, []);
 
