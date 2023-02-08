@@ -18,8 +18,9 @@ function compileCode(allowDuplicates = false): string[] {
 type GameContextType = {
   rows: number;
   columns: number;
-  activeRow: boolean[];
+  activeRow: string[];
   activeRowIndex: number;
+  setActiveRow: React.Dispatch<React.SetStateAction<string[]>>;
 };
 
 export const GameContext = React.createContext<GameContextType>(
@@ -32,7 +33,7 @@ type GameContextProviderProps = {
 
 export function GameContextProvider({ children }: GameContextProviderProps) {
   const [activeRowIndex, setActiveRowIndex] = useState(0);
-  const [activeRow, setActiveRow] = useState([]);
+  const [activeRow, setActiveRow] = useState<string[]>([]);
   const codeToGuess = compileCode();
 
   console.log({ codeToGuess });
