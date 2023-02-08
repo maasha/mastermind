@@ -6,7 +6,7 @@ type ResponseProps = {
 };
 
 export default function Response({ rowIndex }: ResponseProps) {
-  const { columns } = useContext(GameContext);
+  const { columns, correctPositions, correctColors } = useContext(GameContext);
 
   const columnsList = [];
 

@@ -10,7 +10,7 @@ type GuessProps = {
 };
 
 export default function Guess({ active, columnIndex }: GuessProps) {
-  const { activeRow, setActiveRow } = useContext(GameContext);
+  const { setCurrentGuess: setActiveRow } = useContext(GameContext);
 
   const [guessColorClass, setGuessColorClass] = useState("bg-slate-600");
 
@@ -31,8 +31,9 @@ export default function Guess({ active, columnIndex }: GuessProps) {
     setGuessColorClass(COLORS[colorName]);
 
     setActiveRow((prev) => {
-      prev[columnIndex] = colorName;
-      return prev;
+      const copy = [...prev];
+      copy[columnIndex] = colorName;
+      return copy;
     });
   }
 

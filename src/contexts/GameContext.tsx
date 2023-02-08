@@ -1,4 +1,4 @@
-import React, { ReactNode, useMemo, useState } from "react";
+import React, { ReactNode, useEffect, useMemo, useState } from "react";
 import { COLUMNS, ROWS } from "../static/board-dimensions.const";
 import { COLORS } from "../static/colors.const";
 
@@ -18,9 +18,11 @@ function compileCode(allowDuplicates = false): string[] {
 type GameContextType = {
   rows: number;
   columns: number;
-  activeRow: string[];
+  currentGuess: string[];
   activeRowIndex: number;
-  setActiveRow: React.Dispatch<React.SetStateAction<string[]>>;
+  setCurrentGuess: React.Dispatch<React.SetStateAction<string[]>>;
+  correctPositions: number;
+  correctColors: number;
 };
 
 export const GameContext = React.createContext<GameContextType>(
@@ -31,24 +33,70 @@ type GameContextProviderProps = {
   children: ReactNode;
 };
 
+function updateCorrectColors(
+  codeToGuess: string[],
+  currentGuess: string[]
+): number {
+  let correct = 0;
+
+  const uniqueSet1 = new Set<string>();
+  const uniqueSet2 = new Set<string>();
+
+  codeToGuess.forEach((color) => uniqueSet1.add(color));
+  currentGuess.forEach((color) => uniqueSet2.add(color));
+
+  for (const color of Array.from(uniqueSet1)) {
+    if (uniqueSet2.has(color)) {
+      correct += 1;
+    }
+  }
+
+  return correct;
+}
+
+function updateCorrectPositions(
+  codeToGuess: string[],
+  currentGuess: string[]
+): number {
+  let correct = 0;
+
+  for (let i = 0; i < codeToGuess.length; i += 1) {
+    if (codeToGuess[i] == null) continue;
+
+    if (codeToGuess[i] === currentGuess[i]) {
+      correct += 1;
+    }
+  }
+
+  return correct;
+}
+
+const codeToGuess = compileCode();
+
 export function GameContextProvider({ children }: GameContextProviderProps) {
   const [activeRowIndex, setActiveRowIndex] = useState(0);
-  const [activeRow, setActiveRow] = useState<string[]>([]);
-  const codeToGuess = compileCode();
+  const [correctColors, setCorrectColors] = useState(0);
+  const [correctPositions, setCorrectPositions] = useState(0);
+  const [currentGuess, setCurrentGuess] = useState<string[]>(Array(COLUMNS));
 
-  console.log({ codeToGuess });
+  useEffect(() => {
+    setCorrectColors(updateCorrectColors(codeToGuess, currentGuess));
+    setCorrectPositions(updateCorrectPositions(codeToGuess, currentGuess));
 
-  const boardValue = useMemo(() => {
-    return {
-      rows: ROWS,
-      columns: COLUMNS,
-      codeToGuess,
-      activeRowIndex,
-      setActiveRowIndex,
-      activeRow,
-      setActiveRow,
-    };
-  }, []);
+    console.log("USE EFFECT", { correctColors, correctPositions });
+  }, [JSON.stringify(currentGuess)]);
+
+  const boardValue = {
+    rows: ROWS,
+    columns: COLUMNS,
+    codeToGuess,
+    activeRowIndex,
+    setActiveRowIndex,
+    currentGuess,
+    setCurrentGuess,
+    correctPositions,
+    correctColors,
+  };
 
   return (
     <GameContext.Provider value={boardValue}>{children}</GameContext.Provider>
