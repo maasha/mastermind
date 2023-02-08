@@ -6,17 +6,44 @@ type ResponseProps = {
 };
 
 export default function Response({ rowIndex }: ResponseProps) {
-  const { columns, correctPositions, correctColors } = useContext(GameContext);
+  const { columns, guessRows } = useContext(GameContext);
 
+  let i = 0;
   const columnsList = [];
 
-  for (let i = 0; i < columns; i += 1) {
+  if (true) {
+    while (i < guessRows[rowIndex].correctPositions) {
+      columnsList.push(
+        <span
+          key={i}
+          className="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-black"
+        ></span>
+      );
+
+      i += 1;
+    }
+
+    while (i < guessRows[rowIndex].correctColors) {
+      columnsList.push(
+        <span
+          key={i}
+          className="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-white"
+        ></span>
+      );
+
+      i += 1;
+    }
+  }
+
+  while (i < columns) {
     columnsList.push(
       <span
         key={i}
         className="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
       ></span>
     );
+
+    i += 1;
   }
 
   return (

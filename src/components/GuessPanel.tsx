@@ -15,6 +15,7 @@ export default function GuessPanel({ rowIndex }: GuessPanelProps) {
       <Guess
         key={i}
         active={rowIndex === activeRowIndex}
+        rowIndex={rowIndex}
         columnIndex={i}
       ></Guess>
     );

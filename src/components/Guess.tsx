@@ -3,14 +3,16 @@ import { useDrop } from "react-dnd";
 import { GameContext } from "../contexts/GameContext";
 import { COLORS } from "../static/colors.const";
 import { PegProps } from "./Peg";
+import _ from "lodash";
 
 type GuessProps = {
   active: boolean;
+  rowIndex: number;
   columnIndex: number;
 };
 
-export default function Guess({ active, columnIndex }: GuessProps) {
-  const { setCurrentGuess: setActiveRow } = useContext(GameContext);
+export default function Guess({ active, rowIndex, columnIndex }: GuessProps) {
+  const { setGuessRows } = useContext(GameContext);
 
   const [guessColorClass, setGuessColorClass] = useState("bg-slate-600");
 
@@ -30,9 +32,9 @@ export default function Guess({ active, columnIndex }: GuessProps) {
   function guessColor(colorName: string) {
     setGuessColorClass(COLORS[colorName]);
 
-    setActiveRow((prev) => {
-      const copy = [...prev];
-      copy[columnIndex] = colorName;
+    setGuessRows((prev) => {
+      const copy = _.cloneDeep(prev);
+      copy[rowIndex].guess[columnIndex] = colorName;
       return copy;
     });
   }
