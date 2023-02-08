@@ -8,29 +8,32 @@ type ResponseProps = {
 export default function Response({ rowIndex }: ResponseProps) {
   const { columns, guessRows } = useContext(GameContext);
 
-  const correctPositions = guessRows[rowIndex].correctPositions;
-  const correctColors = guessRows[rowIndex].correctColors;
+  let correctPositions = 0;
+  let correctColors = 0;
+
+  if (!guessRows[rowIndex].guess.some((v) => v == null)) {
+    correctPositions = guessRows[rowIndex].correctPositions;
+    correctColors = guessRows[rowIndex].correctColors;
+  }
 
   const columnsList = [];
 
-  if (true) {
-    for (let i = 0; i < correctPositions; i += 1) {
-      columnsList.push(
-        <span
-          key={`pos-${i}`}
-          className="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-black"
-        ></span>
-      );
-    }
+  for (let i = 0; i < correctPositions; i += 1) {
+    columnsList.push(
+      <span
+        key={`pos-${i}`}
+        className="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-black"
+      ></span>
+    );
+  }
 
-    for (let i = 0; i < correctColors - correctPositions; i += 1) {
-      columnsList.push(
-        <span
-          key={`col-${i}`}
-          className="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-white"
-        ></span>
-      );
-    }
+  for (let i = 0; i < correctColors - correctPositions; i += 1) {
+    columnsList.push(
+      <span
+        key={`col-${i}`}
+        className="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-white"
+      ></span>
+    );
   }
 
   for (
