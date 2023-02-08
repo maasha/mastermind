@@ -1,3 +1,4 @@
+import _ from "lodash";
 import React, { ReactNode, useEffect, useState } from "react";
 import IGuess from "../interfaces/guess.interface";
 import { COLUMNS, ROWS } from "../static/board-dimensions.const";
@@ -83,14 +84,17 @@ export function GameContextProvider({ children }: GameContextProviderProps) {
   // useMemo(() => codeToGuess = compileCode(), [])
 
   useEffect(() => {
-    guessRows[activeRowIndex].correctColors = correctColors(
+    const copy = _.cloneDeep(guessRows);
+    copy[activeRowIndex].correctColors = correctColors(
       codeToGuess,
-      guessRows[activeRowIndex]
+      copy[activeRowIndex]
     );
-    guessRows[activeRowIndex].correctPositions = correctPositions(
+    copy[activeRowIndex].correctPositions = correctPositions(
       codeToGuess,
-      guessRows[activeRowIndex]
+      copy[activeRowIndex]
     );
+
+    setGuessRows(copy);
   }, [JSON.stringify(guessRows[activeRowIndex])]);
 
   const boardValue = {
