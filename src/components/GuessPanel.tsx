@@ -7,17 +7,12 @@ type GuessPanelProps = {
 };
 
 export default function GuessPanel({ rowIndex }: GuessPanelProps) {
-  const { columns, activeRowIndex } = useContext(GameContext);
+  const { columns } = useContext(GameContext);
   const columnsList = [];
 
   for (let i = 0; i < columns; i += 1) {
     columnsList.push(
-      <Guess
-        key={i}
-        active={rowIndex === activeRowIndex}
-        rowIndex={rowIndex}
-        columnIndex={i}
-      ></Guess>
+      <Guess key={i} rowIndex={rowIndex} columnIndex={i}></Guess>
     );
   }
 
