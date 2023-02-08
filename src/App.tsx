@@ -3,6 +3,7 @@ import PegPanel from "./components/PegPanel";
 import { GameContextProvider } from "./contexts/GameContext";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <GameContextProvider>
           <PegPanel />
           <Board />
+          <Footer />
         </GameContextProvider>
       </DndProvider>
     </div>

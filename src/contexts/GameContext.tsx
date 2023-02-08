@@ -71,6 +71,8 @@ type GameContextType = {
   guessRows: IGuess[];
   setGuessRows: React.Dispatch<React.SetStateAction<IGuess[]>>;
   activeRowIndex: number;
+  gameWon: boolean;
+  gameOver: boolean;
 };
 
 type GameContextProviderProps = {
@@ -78,6 +80,8 @@ type GameContextProviderProps = {
 };
 
 export function GameContextProvider({ children }: GameContextProviderProps) {
+  const [gameWon, setGameWon] = useState(false);
+  const [gameOver, setGameOver] = useState(false);
   const [activeRowIndex, setActiveRowIndex] = useState(0);
   const [guessRows, setGuessRows] = useState<IGuess[]>(compileGuessRows());
 
@@ -97,6 +101,12 @@ export function GameContextProvider({ children }: GameContextProviderProps) {
     setGuessRows(copy);
   }, [JSON.stringify(guessRows[activeRowIndex])]);
 
+  useEffect(() => {
+    if (guessRows[activeRowIndex].correctPositions === COLUMNS) {
+      setGameWon(true);
+    }
+  }, [guessRows[activeRowIndex].correctPositions]);
+
   const boardValue = {
     rows: ROWS,
     columns: COLUMNS,
@@ -105,6 +115,8 @@ export function GameContextProvider({ children }: GameContextProviderProps) {
     setActiveRowIndex,
     guessRows,
     setGuessRows,
+    gameWon,
+    gameOver,
   };
 
   return (
