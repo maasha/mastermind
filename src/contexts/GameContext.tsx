@@ -9,7 +9,8 @@ function compileCode(allowDuplicates = false): string[] {
   const code: string[] = [];
 
   while (code.length < COLUMNS) {
-    const color = colors[Math.floor(Math.random() * COLUMNS)];
+    const color =
+      colors[Math.floor(Math.random() * Object.keys(COLORS).length)];
     if (!allowDuplicates && code.includes(color)) continue;
     code.push(color);
   }
