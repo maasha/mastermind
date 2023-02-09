@@ -1,6 +1,11 @@
 # mastermind
 
-React functions demo project
+Demo project using:
+
+- React functional components with Typescript (https://reactjs.org/)
+- Vite frontend tooling (https://vitejs.dev/)
+- Tailwind CSS (https://tailwindcss.com/)
+- Netlify for continuous deployment (https://app.netlify.com/)
 
 Play here: https://peppy-liger-acd8a1.netlify.app/
 
