@@ -15,6 +15,7 @@ steps:
 
 - script: |
     echo Running npm build
+    pwd
     npm run build
-  displayName: 'npm build'
+  displayName: 'Execute `npm run build`'
 
