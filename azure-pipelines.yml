@@ -14,6 +14,11 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
+    echo Running npm install
+    npm install
+  displayName: 'Execute `npm install`'
+
+- script: |
     echo Running npm build
     pwd
     npm run build
