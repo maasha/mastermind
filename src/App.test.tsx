@@ -8,4 +8,9 @@ describe("App", () => {
     const result = render(<App />);
     expect(result).toMatchSnapshot();
   });
+
+  it("renders the game board", () => {
+    render(<App />);
+    expect(screen.getByTestId("board")).toBeDefined();
+  });
 });
