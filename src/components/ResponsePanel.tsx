@@ -11,6 +11,12 @@ export default function Response({ rowIndex }: ResponseProps) {
   let correctPositions = 0;
   let correctColors = 0;
 
+  if (rowIndex > guessRows.length - 1) {
+    console.error("Response: rowIndex out of bounds");
+
+    return;
+  }
+
   if (!guessRows[rowIndex].guess.some((v) => v == null)) {
     correctPositions = guessRows[rowIndex].correctPositions;
     correctColors = guessRows[rowIndex].correctColors;
