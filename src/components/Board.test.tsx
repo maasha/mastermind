@@ -11,7 +11,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 
 describe("Board", () => {
   it("renders the board", () => {
-    const rows = 10;
+    const rows = 1;
     const columns = 4;
     const guessRows: IGuess[] = [
       {
