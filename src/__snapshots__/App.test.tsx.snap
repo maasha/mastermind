@@ -1,0 +1,886 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="mastermind w-96 h-full pt-2 mx-auto"
+      >
+        <div
+          class="mastermind-header flex justify-center"
+        >
+          <h1
+            class="text-3xl font-bold pb-5"
+          >
+            Master Mind
+          </h1>
+          <img
+            alt="Brain Logo"
+            class="h-10 ml-4"
+            src="/brain.svg"
+          />
+        </div>
+        <div
+          class="flex justify-between mx-auto pb-4 px-2"
+        >
+          <span
+            class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full hover:cursor-move bg-white opacity-100"
+            draggable="true"
+          />
+          <span
+            class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full hover:cursor-move bg-black opacity-100"
+            draggable="true"
+          />
+          <span
+            class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full hover:cursor-move bg-red-600 opacity-100"
+            draggable="true"
+          />
+          <span
+            class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full hover:cursor-move bg-yellow-600 opacity-100"
+            draggable="true"
+          />
+          <span
+            class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full hover:cursor-move bg-blue-600 opacity-100"
+            draggable="true"
+          />
+          <span
+            class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full hover:cursor-move bg-green-600 opacity-100"
+            draggable="true"
+          />
+        </div>
+        <div
+          class="border-3 rounded bg-slate-500 mx-auto"
+        >
+          <div
+            class="flex justify-between"
+          >
+            <div
+              class="flex justify-between w-3/4 p-2"
+            >
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+            <div
+              class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+            >
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+          </div>
+          <div
+            class="flex justify-between"
+          >
+            <div
+              class="flex justify-between w-3/4 p-2"
+            >
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+            <div
+              class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+            >
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+          </div>
+          <div
+            class="flex justify-between"
+          >
+            <div
+              class="flex justify-between w-3/4 p-2"
+            >
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+            <div
+              class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+            >
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+          </div>
+          <div
+            class="flex justify-between"
+          >
+            <div
+              class="flex justify-between w-3/4 p-2"
+            >
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+            <div
+              class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+            >
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+          </div>
+          <div
+            class="flex justify-between"
+          >
+            <div
+              class="flex justify-between w-3/4 p-2"
+            >
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+            <div
+              class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+            >
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+          </div>
+          <div
+            class="flex justify-between"
+          >
+            <div
+              class="flex justify-between w-3/4 p-2"
+            >
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+            <div
+              class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+            >
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+          </div>
+          <div
+            class="flex justify-between"
+          >
+            <div
+              class="flex justify-between w-3/4 p-2"
+            >
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+            <div
+              class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+            >
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+          </div>
+          <div
+            class="flex justify-between"
+          >
+            <div
+              class="flex justify-between w-3/4 p-2"
+            >
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+            <div
+              class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+            >
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+          </div>
+          <div
+            class="flex justify-between"
+          >
+            <div
+              class="flex justify-between w-3/4 p-2"
+            >
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+            <div
+              class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+            >
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+          </div>
+          <div
+            class="flex justify-between"
+          >
+            <div
+              class="flex justify-between w-3/4 p-2"
+            >
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+            <div
+              class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+            >
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+              <span
+                class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+              />
+            </div>
+          </div>
+        </div>
+        <div />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="mastermind w-96 h-full pt-2 mx-auto"
+    >
+      <div
+        class="mastermind-header flex justify-center"
+      >
+        <h1
+          class="text-3xl font-bold pb-5"
+        >
+          Master Mind
+        </h1>
+        <img
+          alt="Brain Logo"
+          class="h-10 ml-4"
+          src="/brain.svg"
+        />
+      </div>
+      <div
+        class="flex justify-between mx-auto pb-4 px-2"
+      >
+        <span
+          class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full hover:cursor-move bg-white opacity-100"
+          draggable="true"
+        />
+        <span
+          class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full hover:cursor-move bg-black opacity-100"
+          draggable="true"
+        />
+        <span
+          class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full hover:cursor-move bg-red-600 opacity-100"
+          draggable="true"
+        />
+        <span
+          class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full hover:cursor-move bg-yellow-600 opacity-100"
+          draggable="true"
+        />
+        <span
+          class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full hover:cursor-move bg-blue-600 opacity-100"
+          draggable="true"
+        />
+        <span
+          class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full hover:cursor-move bg-green-600 opacity-100"
+          draggable="true"
+        />
+      </div>
+      <div
+        class="border-3 rounded bg-slate-500 mx-auto"
+      >
+        <div
+          class="flex justify-between"
+        >
+          <div
+            class="flex justify-between w-3/4 p-2"
+          >
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+          <div
+            class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+          >
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+        </div>
+        <div
+          class="flex justify-between"
+        >
+          <div
+            class="flex justify-between w-3/4 p-2"
+          >
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+          <div
+            class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+          >
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+        </div>
+        <div
+          class="flex justify-between"
+        >
+          <div
+            class="flex justify-between w-3/4 p-2"
+          >
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+          <div
+            class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+          >
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+        </div>
+        <div
+          class="flex justify-between"
+        >
+          <div
+            class="flex justify-between w-3/4 p-2"
+          >
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+          <div
+            class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+          >
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+        </div>
+        <div
+          class="flex justify-between"
+        >
+          <div
+            class="flex justify-between w-3/4 p-2"
+          >
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+          <div
+            class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+          >
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+        </div>
+        <div
+          class="flex justify-between"
+        >
+          <div
+            class="flex justify-between w-3/4 p-2"
+          >
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+          <div
+            class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+          >
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+        </div>
+        <div
+          class="flex justify-between"
+        >
+          <div
+            class="flex justify-between w-3/4 p-2"
+          >
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+          <div
+            class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+          >
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+        </div>
+        <div
+          class="flex justify-between"
+        >
+          <div
+            class="flex justify-between w-3/4 p-2"
+          >
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+          <div
+            class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+          >
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+        </div>
+        <div
+          class="flex justify-between"
+        >
+          <div
+            class="flex justify-between w-3/4 p-2"
+          >
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+          <div
+            class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+          >
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+        </div>
+        <div
+          class="flex justify-between"
+        >
+          <div
+            class="flex justify-between w-3/4 p-2"
+          >
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-8 w-8 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+          <div
+            class="grid grid-cols-2 w-10 pr-1 gap-px content-center"
+          >
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+            <span
+              class="h-4 w-4 p-1 inline-block border-2 border-black rounded-full bg-slate-600"
+            />
+          </div>
+        </div>
+      </div>
+      <div />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
