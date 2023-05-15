@@ -4,6 +4,7 @@ Demo project using:
 
 - React functional components with Typescript (https://reactjs.org/)
 - Vite frontend tooling (https://vitejs.dev/)
+- Vitest test tooling (https://vitest.dev/)
 - Tailwind CSS (https://tailwindcss.com/)
 - Netlify for continuous deployment (https://app.netlify.com/)
 
